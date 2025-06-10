@@ -8,7 +8,21 @@ const salao = new Schema({
     email: String,
     senha: String,
     telefone: String,
-    email: String,        
+    endereco: {
+        
+        cidade: String,
+        uf: String,
+        cep: String,
+        numero: String,
+        pais: String,
+        estado: String,
+     
+    },        
+
+    geo: {
+        tipo: String,
+        coordinates: Array,
+    }
 });
 
 module.exports = mongoose.model('Salao', salao);
